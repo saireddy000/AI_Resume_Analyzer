@@ -1,0 +1,25 @@
+body{
+    background:#f5f5f5;
+}
+
+.card{
+
+    border:none;
+
+    border-radius:15px;
+
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+button{
+
+    padding:12px 30px;
+
+}

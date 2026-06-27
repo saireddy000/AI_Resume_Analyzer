@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="card shadow p-5">
+
+    <h1 class="text-center mb-4">
+        Resume Analysis
+    </h1>
+
+    <div class="alert alert-success text-center">
+
+        <h2>ATS Score</h2>
+
+        <h1>{{ ats_score }}/100</h1>
+
+    </div>
+
+    <hr>
+
+    <h3>💡 Resume Suggestions</h3>
+
+    <ul class="list-group mb-4">
+
+        {% for suggestion in suggestions %}
+
+        <li class="list-group-item">
+            ⭐ {{ suggestion }}
+        </li>
+
+        {% endfor %}
+
+    </ul>
+
+    <hr>
+
+    <h3>📌 Extracted Skills</h3>
+
+    <ul class="list-group mb-4">
+
+        {% for skill in skills %}
+
+        <li class="list-group-item">
+            ✅ {{ skill }}
+        </li>
+
+        {% endfor %}
+
+    </ul>
+
+    <hr>
+
+    <h3>🎯 Interview Questions</h3>
+
+    {% for skill, questions in interview_questions.items() %}
+
+        <div class="card mb-3 p-3">
+
+            <h5>{{ skill }}</h5>
+
+            <ul>
+
+                {% for question in questions %}
+
+                <li>{{ question }}</li>
+
+                {% endfor %}
+
+            </ul>
+
+        </div>
+
+    {% endfor %}
+
+    <hr>
+
+    <h3>📄 Extracted Resume Text</h3>
+
+    <pre style="white-space: pre-wrap;">{{ resume_text }}</pre>
+
+</div>
+
+{% endblock %}

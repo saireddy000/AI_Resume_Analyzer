@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="text-center">
+
+    <h1 class="display-4 fw-bold">
+        AI Resume Analyzer 🚀
+    </h1>
+
+    <p class="lead mt-3">
+        Analyze your resume using AI and get ATS Score,
+        Skills, Resume Suggestions and Interview Questions.
+    </p>
+
+    <a href="/upload" class="btn btn-primary btn-lg mt-3">
+        Upload Resume
+    </a>
+
+</div>
+
+<hr class="my-5">
+
+<div class="row">
+
+    <div class="col-md-4">
+
+        <div class="card shadow p-4">
+
+            <h3>📄 ATS Score</h3>
+
+            <p>
+                Check how ATS friendly your resume is.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="col-md-4">
+
+        <div class="card shadow p-4">
+
+            <h3>💡 Skills</h3>
+
+            <p>
+                Extract technical skills automatically.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="col-md-4">
+
+        <div class="card shadow p-4">
+
+            <h3>🎯 Interview</h3>
+
+            <p>
+                Generate interview questions from your resume.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
